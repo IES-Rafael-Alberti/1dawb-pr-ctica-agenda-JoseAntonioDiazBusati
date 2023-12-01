@@ -26,9 +26,16 @@ NOMBRE_FICHERO = 'contactos.csv'
 RUTA_FICHERO = path.join(RUTA, NOMBRE_FICHERO)
 
 #TODO: Crear un conjunto con las posibles opciones del menú de la agenda
-OPCIONES_MENU = ?
+OPCIONES_MENU = {1,2,3,4,5,6,7}
 #TODO: Utiliza este conjunto en las funciones agenda() y pedir_opcion()
-
+select=False
+def pedir_opcion():
+    while not select:
+        opcion=int(input("Seleccione una opcion: "))
+        if opcion.isdigit() and int(opcion) in OPCIONES_MENU:
+            return int(opcion)
+        else:
+            print("Opción inválida. Intente nuevamente.")
 
 def borrar_consola():
     """ Limpia la consola
@@ -73,11 +80,25 @@ def agenda(contactos: list):
     """
     #TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
 
-    while opcion != 7:
+    while opcion != 8:
         mostrar_menu()
         opcion = pedir_opcion()
+        if opcion==1:
+            print()
+        elif opcion==2:
+            print()
+        elif opcion==3:
+            print()
+        elif opcion==4:
+            print()
+        elif opcion==5:
+            print()
+        elif opcion==6:
+            print()
+        else:
+            print()
 
-        #TODO: Se valorará que utilices la diferencia simétrica de conjuntos para comprobar que la opción es un número entero del 1 al 6
+        #TODO: Se valorará que utilices la diferencia simétrica de conjuntos para comprobar que la opción es un número entero del 1 al 7
         if opcion in ?:
 
 
