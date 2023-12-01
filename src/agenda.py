@@ -37,6 +37,10 @@ def pedir_opcion():
         else:
             print("Opción inválida. Intente nuevamente.")
 
+def mostrar_menu():
+    print("----AGENDA-----")
+    menu=dict[1:'Nuevo contacto',2:'Modificar contacto',3:'Eliminar contacto',4:'Vaciar agenda',5:'Cargar agenda inicial',6:'Mostrar contactos por criterio',7:'Mostrar la agenda completa',8:'Salir']
+    return menu
 def borrar_consola():
     """ Limpia la consola
     """
@@ -81,7 +85,7 @@ def agenda(contactos: list):
     #TODO: Crear un bucle para mostrar el menú y ejecutar las funciones necesarias según la opción seleccionada...
 
     while opcion != 8:
-        mostrar_menu()
+        menu=mostrar_menu()
         opcion = pedir_opcion()
         if opcion==1:
             print()
